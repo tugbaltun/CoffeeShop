@@ -3,7 +3,7 @@ package coffeeshop.dataAccess.abstracts.campaign;
 import coffeeshop.entities.concretes.campaign.Campaign;
 import coffeeshop.entities.concretes.customer.Customer;
 
-public class INeroCampaignDal implements ICampaignDal{
+public class NeroCampaignDal implements ICampaignDal{
 
 	@Override
 	public void baseCampaign(Customer customer, double amount) {

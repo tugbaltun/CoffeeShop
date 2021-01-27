@@ -2,7 +2,7 @@ package coffeeshop.dataAccess.abstracts.customer;
 
 import coffeeshop.entities.concretes.customer.Customer;
 
-public class IStarbucksCustomerDal implements ICustomerDal{
+public class StarbucksCustomerDal implements ICustomerDal{
 
 	@Override
 	public void add(Customer customer) {

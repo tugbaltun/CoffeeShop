@@ -3,7 +3,7 @@ package coffeeshop.dataAccess.abstracts.campaign;
 import coffeeshop.entities.concretes.campaign.Campaign;
 import coffeeshop.entities.concretes.customer.Customer;
 
-public class IStarbucksCampaignDal implements ICampaignDal{
+public class StarbucksCampaignDal implements ICampaignDal{
 	
 	public void starCount(Customer customer, int star) {
 		if(star >= 5)

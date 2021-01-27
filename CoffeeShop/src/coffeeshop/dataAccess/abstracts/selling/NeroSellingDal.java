@@ -2,7 +2,7 @@ package coffeeshop.dataAccess.abstracts.selling;
 
 import coffeeshop.entities.concretes.customer.Customer;
 
-public class INeroSellingDal implements ISellingDal {
+public class NeroSellingDal implements ISellingDal {
 
 	@Override
 	public void count(Customer customer, double amount) {

@@ -4,10 +4,10 @@ import coffeeshop.business.concretes.CampaignService;
 import coffeeshop.business.concretes.CustomerService;
 import coffeeshop.business.concretes.SellingService;
 import coffeeshop.dataAccess.abstracts.campaign.ICampaignDal;
-import coffeeshop.dataAccess.abstracts.campaign.INeroCampaignDal;
-import coffeeshop.dataAccess.abstracts.campaign.IStarbucksCampaignDal;
-import coffeeshop.dataAccess.abstracts.customer.INeroCustomerDal;
-import coffeeshop.dataAccess.abstracts.customer.IStarbucksCustomerDal;
+import coffeeshop.dataAccess.abstracts.campaign.NeroCampaignDal;
+import coffeeshop.dataAccess.abstracts.campaign.StarbucksCampaignDal;
+import coffeeshop.dataAccess.abstracts.customer.NeroCustomerDal;
+import coffeeshop.dataAccess.abstracts.customer.StarbucksCustomerDal;
 import coffeeshop.entities.concretes.campaign.Campaign;
 import coffeeshop.entities.concretes.customer.Customer;
 import coffeeshop.entities.concretes.customer.NeroCustomer;
@@ -26,14 +26,14 @@ public class Main {
 		Customer customer3 = new NeroCustomer(3,"Hale","Can");
 		
 		CustomerService customerService = new CustomerService();
-		customerService.customerDal = new INeroCustomerDal();
+		customerService.customerDal = new NeroCustomerDal();
 		customerService.add(customer1);
 		customerService.update(customer1, customer2);
 		customerService.add(customer3);
 		customerService.delete(customer1);
 		
 		CampaignService campaignService = new CampaignService();
-		campaignService.campainDal = new INeroCampaignDal();
+		campaignService.campainDal = new NeroCampaignDal();
 		
 		Campaign campaign = new Campaign(1,"Star");
 		campaignService.add(campaign);
@@ -41,7 +41,7 @@ public class Main {
 		campaignService.delete(campaign);
 		
 		SellingService sellingService = new SellingService();
-		sellingService.campaignDal = new INeroCampaignDal();
+		sellingService.campaignDal = new NeroCampaignDal();
 		sellingService.count(customer1, 100);
 		
 	}
