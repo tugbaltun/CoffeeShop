@@ -17,13 +17,13 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-//		Customer customer1 = new StarbucksCustomer(1,"Selma","Çiçek","101","1997",0);
+//		Customer customer1 = new StarbucksCustomer(1,"Selma","Tan","101","1997",0);
 //		Customer customer2 = new StarbucksCustomer(2,"Leyla","Mercan","102","1995",0);
-//		Customer customer3 = new StarbucksCustomer(3,"Hale","Tatlý","103","1994",0);
+//		Customer customer3 = new StarbucksCustomer(3,"Hale","Can","103","1994",0);
 		
-		Customer customer1 = new NeroCustomer(1,"Selma","Çiçek");
+		Customer customer1 = new NeroCustomer(1,"Selma","Tan");
 		Customer customer2 = new NeroCustomer(2,"Leyla","Mercan");
-		Customer customer3 = new NeroCustomer(3,"Hale","Tatlý");
+		Customer customer3 = new NeroCustomer(3,"Hale","Can");
 		
 		CustomerService customerService = new CustomerService();
 		customerService.customerDal = new INeroCustomerDal();
@@ -35,7 +35,7 @@ public class Main {
 		CampaignService campaignService = new CampaignService();
 		campaignService.campainDal = new INeroCampaignDal();
 		
-		Campaign campaign = new Campaign(1,"Yýldýz");
+		Campaign campaign = new Campaign(1,"Star");
 		campaignService.add(campaign);
 		campaignService.update(campaign, campaign);
 		campaignService.delete(campaign);
